@@ -12,6 +12,8 @@ dependencies:
       if [ ! -d ~/.yarn ]; then
         curl -o- -L https://yarnpkg.com/install.sh | bash
       fi
+    - export PATH=$PATH:~/.yarn/bin/
+    - yarn --version
 
   override:
     - yarn install
